@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+import os
 
 podatki = []
 
@@ -45,10 +46,18 @@ for i in range(1, 93):
             }
             podatki.append(podatki_tekmovalke)
 
-with open('podatki.json', 'w', encoding='utf-8') as json_file:
-        json.dump(podatki, json_file, ensure_ascii=False, indent=4) #ensure_ascii da ohranimo posebne znake
+ime_mape = "pridobivanje_podatkov"
+
+if not os.path.exists(ime_mape):        #zaradi urejenosti dodamo shranimo v posebno mapo
+    os.makedirs(ime_mape)
+
+pot_do_datoteke = os.path.join(ime_mape, 'podatki.json')
+
+with open(pot_do_datoteke, 'w', encoding='utf-8') as json_file:
+    json.dump(podatki, json_file, ensure_ascii=False, indent=4)
 
 print("Prenos uspešen")
+
 
 
 
