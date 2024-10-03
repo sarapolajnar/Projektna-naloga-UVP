@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import pandas as pd
 
 podatki = []
 
@@ -51,10 +52,17 @@ ime_mape = "pridobivanje_podatkov"
 if not os.path.exists(ime_mape):        #zaradi urejenosti dodamo shranimo v posebno mapo
     os.makedirs(ime_mape)
 
-pot_do_datoteke = os.path.join(ime_mape, 'podatki.json')
+pot_do_json = os.path.join(ime_mape, 'podatki.json')
 
-with open(pot_do_datoteke, 'w', encoding='utf-8') as json_file:
+with open(pot_do_json, 'w', encoding='utf-8') as json_file:
     json.dump(podatki, json_file, ensure_ascii=False, indent=4)
+
+with open(pot_do_json, 'r', encoding='utf-8') as json_file:     #odpremo le za branje
+    podatki_json = json.load(json_file)
+
+data_frame = pd.DataFrame(podatki_json)     #shranis v pandas obliki
+pot_do_csv = os.path.join(ime_mape, 'podatki.csv')      #kam naj shrani
+data_frame.to_csv(pot_do_csv, index=False, encoding='utf-8')        #pretvori v csv
 
 print("Prenos uspešen")
 
