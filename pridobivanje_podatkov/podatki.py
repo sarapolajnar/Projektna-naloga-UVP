@@ -1,4 +1,4 @@
-import requests
+import requests 
 from bs4 import BeautifulSoup
 import json
 import os
@@ -28,8 +28,8 @@ for i in range(1, 93):
         if celica:
             rank = celica[0].text.strip()   
             wind = celica[2].text.strip()  
-            competitor_link = celica[3].find('a')  
-            competitor = competitor_link.text.strip() if competitor_link else 'N/A' #ime tekmovalke je za linkom med a-ji
+            competitor_link = celica[3].find('a')    #ime tekmovalke je za linkom med a-ji
+            competitor = competitor_link.text.strip() if competitor_link else 'N/A'
             dob = celica[4].text.strip()  
             country = celica[5].text.strip()
             position = celica[6].text.strip()         
