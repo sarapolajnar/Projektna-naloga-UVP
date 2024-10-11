@@ -2,12 +2,13 @@
 ## Analiza teka žensk na 60m
 
 Avtorica: Sara Polajnar
+Oktober 2024
 
 ### Uvod 
-Glavna ideja analize in navdih izhajata iz vprašanja: "Ali res ljudje afriškega porekla dosegajo najboljše rezultate predvsem na šprintih in tekih na srednje razdalje?" V nalogi sem za ciljno skupino vzela ženske iz celega sveta in naredila analizo teka na 60m. Vsi podatki so bili dne 10.10.2024 zajeti iz [spletne strani](https://worldathletics.org/records/toplists/sprints/60-metres/all/women/senior/2024?regionType=world&timing=electronic&windReading=regular&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229684&ageCategory=senior). Tekom analize pa so se pojavile še različne druge možnosti za primerjavo podatkov:
+Glavna ideja analize in navdih izhajata iz vprašanja: "Ali res ljudje afriškega porekla dosegajo najboljše rezultate predvsem na šprintih in tekih na srednje razdalje?" V nalogi sem za ciljno skupino vzela ženske nad 20 let iz celega sveta in naredila analizo teka na 60m v letu 2024. Vsi podatki so bili dne 10.10.2024 zajeti iz [spletne strani](https://worldathletics.org/records/toplists/sprints/60-metres/all/women/senior/2024?regionType=world&timing=electronic&windReading=regular&page=1&bestResultsOnly=true&maxResultsByCountry=all&eventId=10229684&ageCategory=senior). Tekom analize pa so se pojavile še različne druge možnosti za primerjavo podatkov:
 
 #### Kako se rezultati razlikujejo:
-- glede na starost?
+- glede na starost
 - glede na državljanstvo
 - glede na mesec rojstva
 - glede na letni čas dogodka (vpliv okoljskih dejavnikov, predvsem temperature)
