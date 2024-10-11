@@ -30,23 +30,25 @@ while True:
 
             if celica:
                 rank = celica[0].text.strip()   
-                wind = celica[2].text.strip()  
+                mark = celica[1].text.strip() 
                 competitor_link = celica[3].find('a')    #ime tekmovalke je za linkom med a-ji
                 competitor = competitor_link.text.strip() if competitor_link else 'N/A'
                 dob = celica[4].text.strip()  
                 country = celica[5].text.strip()
                 position = celica[6].text.strip()         
                 date = celica[9].text.strip()   
+                result_score = celica[10].text.strip()
                 
                 #naredimo slovar
                 podatki_tekmovalke = {
                     'uvrstitev': rank,
-                    'veter': wind,
+                    'rezultat [s]': mark,
                     'ime tekmovalke': competitor,
                     'datum rojstva': dob,
                     'država': country,
                     'pozicija' : position,
                     'datum dogodka': date,
+                    'skupne točke' : result_score
                 }
                 podatki.append(podatki_tekmovalke)
 
